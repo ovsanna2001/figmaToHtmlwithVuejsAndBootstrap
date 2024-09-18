@@ -1,0 +1,120 @@
+.bg-light {
+    background-color: #fff!important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #21243D;
+    font-size: 20px;
+    text-align: center;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: #FF6464;
+}
+body {
+    color: #21243D;
+}
+.work-wrapper {
+    padding-top: 5rem;
+    width: 60%;
+    margin: auto;
+}
+.work-item {
+    padding-top:3rem;
+    padding-bottom:3rem;
+    border-bottom: 1px solid #E0E0E0;
+}
+.work-item:not(:first-child) {
+    padding-top: 3rem;
+ }
+.work-item h3 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 44px;
+    margin-bottom: 1rem;
+}
+.work-item button {
+    width: 62px;
+    height: 25px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    background: #142850;
+    border-radius: 16px;
+    margin-right: 10px;
+    border: none;
+}
+.work-item span {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 29px;
+    color: #8695A4;
+}
+.work-item p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    margin-top: .8rem;
+}
+.work-content div {
+    display: flex;
+    align-items: center;
+}
+.left-part {
+    margin-right: 20px;
+}
+.mobile-item {
+    display: none;
+}
+footer {
+    padding: 5rem 0;
+}
+footer p {
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    font-size: 14px;
+}
+@media only screen and (max-width: 991px) {
+  .navbar-light .navbar-toggler,
+  .navbar-light .navbar-toggler:focus {
+      border: none;
+      box-shadow: none;
+  }
+  .navbar-light .navbar-toggler-icon {
+      background-image: url('../images/menu.svg');
+  }
+  .work-wrapper {
+      width: 100%;
+      padding-top: 1rem;
+  }
+  .work-item {
+      flex-wrap: wrap;
+  }
+  .left-part {
+        margin-right: 0;
+        width: 100%;
+   }
+   .left-part img {
+        width: 100%;
+   }
+   .work-item h3 {
+        font-size: 23px;
+        margin-bottom: 0.5rem;
+        margin-top: 0.3rem;
+    }
+    .work-item:not(:first-child) {
+        padding-top: 1rem;
+    }
+    .work-item:not(:first-child):not(.mobile-item) {
+        display: none!important;
+    }
+    .mobile-item {
+        display:flex;
+    }
+    .work-item {
+        padding-bottom: 1rem;
+    }
+    footer {
+        padding: 2.5rem 0;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Work</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div id="app">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item" v-for="menu in menus">
+                      <a :class="addActiveClass(menu.id)" aria-current="page" href="#">{{ menu.item }}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <main>
+                <div class="container">
+                    <div class="work-wrapper">
+                        <h2>{{card_title}}</h2>
+                        <div class="work-block">
+                            <div v-for="card in cards" :class="changeWorkItemClass(card.id)">
+                                <div class="left-part">
+                                    <img v-bind:src="card.img_link">
+                                </div>
+                                <div class="work-content">
+                                    <h3>{{card.car_title}}</h3>
+                                    <div>
+                                        <button type="button" name="button">{{card.button_text}}</button>
+                                        <span>{{card.span_text}}</span>
+                                    </div>
+                                    <p>
+                                        {{card.content}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="conatiner">
+                    <div class="d-flex social-links justify-content-center">
+                        <a class="nav-link" href="#" v-for="social in socials">
+                            <img v-bind:src="social.img_link"/>
+                        </a>
+                    </div>
+                    <p class="text-center">{{ footer_text }}</p>
+                </div>
+            </footer>
+        </div>
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/vue.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
